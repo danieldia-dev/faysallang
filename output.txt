@@ -1,0 +1,16 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.01s
+     Running `target/debug/faysallang minimal.fsl --debug`
+Running Faysal Lang...
+
+Code:
+3mol highkey "IT WORKS!"
+
+
+Tokens: [Number(3.0), Identifier("mol"), Highkey, String("IT WORKS!"), Eof]
+
+Warning: Could not parse token: Identifier("mol")
+Warning: Could not parse token: String("IT WORKS!")
+AST (0 statements): []
+
+Output:
+-------

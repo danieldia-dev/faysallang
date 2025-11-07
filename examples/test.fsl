@@ -1,0 +1,205 @@
+// Faysal Lang - Comprehensive Examples
+
+// ============================================
+// EXAMPLE 1: Arithmetic Operations
+// ============================================
+3mol highkey "=== Arithmetic Demo ==="
+
+hayde a hiyye 10
+hayde b hiyye 5
+
+3mol highkey "Addition:"
+hayde sum hiyye a + b
+3mol highkey sum
+
+3mol highkey "Subtraction:"
+hayde diff hiyye a - b
+3mol highkey diff
+
+3mol highkey "Multiplication:"
+hayde product hiyye a * b
+3mol highkey product
+
+3mol highkey "Division:"
+hayde quotient hiyye a / b
+3mol highkey quotient
+
+3mol highkey "Modulo:"
+hayde remainder hiyye a % 3
+3mol highkey remainder
+
+// ============================================
+// EXAMPLE 2: Comparisons and Logic
+// ============================================
+3mol highkey "\n=== Comparison Demo ==="
+
+hayde x hiyye 15
+hayde y hiyye 20
+
+eza betshil x < y lakan
+   3mol highkey "x is less than y - ong no cap!"
+deal
+
+eza betshil x == 15 lakan
+   3mol highkey "x equals 15 - facts!"
+deal
+
+eza betshil x > y lakan
+   3mol highkey "This won't print"
+walla
+   3mol highkey "x is not greater than y"
+deal
+
+// ============================================
+// EXAMPLE 3: While Loops (Counting)
+// ============================================
+3mol highkey "\n=== While Loop Demo ==="
+
+hayde counter hiyye 1
+khalas betshil counter <= 5 lakan
+   3mol highkey counter
+   counter hiyye counter + 1
+deal
+
+// ============================================
+// EXAMPLE 4: Factorial Calculator
+// ============================================
+3mol highkey "\n=== Factorial Demo ==="
+
+hayde n hiyye 5
+hayde factorial hiyye 1
+hayde i hiyye 1
+
+khalas betshil i <= n lakan
+   factorial hiyye factorial * i
+   i hiyye i + 1
+deal
+
+3mol highkey "Factorial of 5 is:"
+3mol highkey factorial
+
+// ============================================
+// EXAMPLE 5: FizzBuzz
+// ============================================
+3mol highkey "\n=== FizzBuzz Demo ==="
+
+hayde num hiyye 1
+khalas betshil num <= 20 lakan
+   hayde by_three hiyye num % 3
+   hayde by_five hiyye num % 5
+   
+   eza betshil by_three == 0 && by_five == 0 lakan
+      3mol highkey "FizzBuzz"
+   walla
+      eza betshil by_three == 0 lakan
+         3mol highkey "Fizz"
+      walla
+         eza betshil by_five == 0 lakan
+            3mol highkey "Buzz"
+         walla
+            3mol highkey num
+         deal
+      deal
+   deal
+   
+   num hiyye num + 1
+deal
+
+// ============================================
+// EXAMPLE 6: Break and Continue
+// ============================================
+3mol highkey "\n=== Break/Continue Demo ==="
+
+hayde j hiyye 0
+khalas betshil j < 10 lakan
+   j hiyye j + 1
+   
+   // Skip even numbers
+   hayde is_even hiyye j % 2 == 0
+   eza betshil is_even lakan
+      yalla
+   deal
+   
+   // Break at 7
+   eza betshil j > 7 lakan
+      waqif
+   deal
+   
+   3mol highkey j
+deal
+
+// ============================================
+// EXAMPLE 7: String Concatenation
+// ============================================
+3mol highkey "\n=== String Demo ==="
+
+hayde name hiyye "Faysal"
+hayde greeting hiyye "Yo what's good, "
+hayde full_msg hiyye greeting + name
+3mol highkey full_msg
+
+// ============================================
+// EXAMPLE 8: Boolean Logic
+// ============================================
+3mol highkey "\n=== Boolean Logic Demo ==="
+
+hayde is_cool hiyye ong_no_cap
+hayde is_valid hiyye ong_no_cap
+hayde is_broken hiyye cap
+
+eza betshil is_cool && is_valid lakan
+   3mol highkey "Both conditions are true!"
+deal
+
+eza betshil is_cool || is_broken lakan
+   3mol highkey "At least one is true!"
+deal
+
+eza betshil !is_broken lakan
+   3mol highkey "Not broken - we good!"
+deal
+
+// ============================================
+// EXAMPLE 9: Nested Conditionals
+// ============================================
+3mol highkey "\n=== Nested Conditionals Demo ==="
+
+hayde score hiyye 85
+
+eza betshil score >= 90 lakan
+   3mol highkey "Grade: A - Highkey crushing it!"
+walla
+   eza betshil score >= 80 lakan
+      3mol highkey "Grade: B - Pretty solid fr"
+   walla
+      eza betshil score >= 70 lakan
+         3mol highkey "Grade: C - Mid but passing"
+      walla
+         3mol highkey "Grade: F - That's cap, try again"
+      deal
+   deal
+deal
+
+// ============================================
+// EXAMPLE 10: Prime Number Check
+// ============================================
+3mol highkey "\n=== Prime Number Check ==="
+
+hayde check_num hiyye 17
+hayde is_prime hiyye ong_no_cap
+hayde divisor hiyye 2
+
+khalas betshil divisor * divisor <= check_num lakan
+   hayde remainder hiyye check_num % divisor
+   eza betshil remainder == 0 lakan
+      is_prime hiyye cap
+      waqif
+   deal
+   divisor hiyye divisor + 1
+deal
+
+eza betshil is_prime lakan
+   3mol highkey "17 is prime - ong no cap!"
+walla
+   3mol highkey "17 is not prime - that's cap"
+deal

@@ -1,0 +1,38 @@
+// Number Guessing Game in Faysal Lang
+// The computer "thinks" of a number and you try to guess it
+
+3mol highkey "=== Guessing Game ==="
+3mol highkey "I'm thinking of a number between 1 and 20..."
+
+// Secret number (hardcoded for demo - in real version would be random)
+hayde secret hiyye 13
+hayde guess hiyye 1
+hayde attempts hiyye 0
+hayde max_attempts hiyye 7
+
+// Try several guesses
+hayde guesses_to_try hiyye 5
+
+khalas betshil guesses_to_try <= 18 lakan
+   attempts hiyye attempts + 1
+   
+   3mol highkey "\nGuess #"
+   3mol highkey attempts
+   3mol highkey "Trying: "
+   3mol highkey guesses_to_try
+   
+   eza betshil guesses_to_try == secret lakan
+      3mol highkey ">>> ah w es ong no cap! <<<"
+      waqif
+   walla
+      eza betshil guesses_to_try < secret lakan
+         3mol highkey "Too low, aim higher fam"
+      walla
+         3mol highkey "Too high, go lower bruh"
+      deal
+   deal
+   
+   guesses_to_try hiyye guesses_to_try + 3
+deal
+
+3mol highkey "\nGame over!"

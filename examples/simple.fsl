@@ -1,0 +1,29 @@
+// Simple test to verify Faysal Lang works
+
+3mol highkey "=== Faysal Lang is running! ==="
+
+// Test 1: Variables
+hayde x hiyye 42
+3mol highkey "x = "
+3mol highkey x
+
+// Test 2: Math
+hayde result hiyye 10 + 5 * 2
+3mol highkey "10 + 5 * 2 = "
+3mol highkey result
+
+// Test 3: Conditionals
+hayde is_working hiyye ong_no_cap
+eza betshil is_working lakan
+   3mol highkey "Conditionals work!"
+deal
+
+// Test 4: Loop
+3mol highkey "Loop test:"
+hayde i hiyye 1
+khalas betshil i <= 3 lakan
+   3mol highkey i
+   i hiyye i + 1
+deal
+
+3mol highkey "=== All tests passed! ong no cap! ==="
